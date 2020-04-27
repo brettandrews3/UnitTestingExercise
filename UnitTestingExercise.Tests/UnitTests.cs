@@ -6,26 +6,34 @@ namespace UnitTestingExercise.Tests
     public class UnitTests
     {
         [Theory]
-        [InlineData()]
+        [InlineData(1,2,3,6)]
+        [InlineData(5,5,5,15)]
+        [InlineData(6,15,9,30)]
         public void Add(int num1, int num2, int num3, int expected)
         {
-            //Arrange
+            var test = new UnitTestMethods();
+            //Arrange: prepare the code we'll need to call the Add method
 
             //Act
-
+            var actual = test.Add(num1, num2, num3);
             //Assert
-
+            Assert.Equal(expected, actual);
         }
 
         [Theory]
-        [InlineData()]
-        public void Subtract(int minuend, int subtrhend, int expected)
+        [InlineData(15,5,10)]
+        [InlineData(64,14,50)]
+        [InlineData(50,0,50)]
+        public void Subtract(int minuend, int subtrahend, int expected)
         {
+            var test = new UnitTestMethods();
             //Arrange
 
             //Act
-
+            var actual = test.Subtract(minuend, subtrahend);
+            //Squiggly because there's not test to run? Yeah!
             //Assert
+            Assert.Equal(expected, actual);
 
         }
 
