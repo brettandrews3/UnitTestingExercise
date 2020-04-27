@@ -38,15 +38,17 @@ namespace UnitTestingExercise.Tests
         }
 
         [Theory]
-        [InlineData()]
+        [InlineData(5,5,25)]
+        [InlineData(6,4,24)]
+        [InlineData(15,5,75)]
         public void Multiply(int num1, int num2, int expected)
         {
             //Arrange
-
+            var test = new UnitTestMethods();
             //Act
-
+            var actual = test.Multiply(num1, num2);
             //Assert
-
+            Assert.Equal(expected, actual);
         }
 
         [Theory]

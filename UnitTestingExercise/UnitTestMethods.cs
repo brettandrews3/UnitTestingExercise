@@ -26,7 +26,10 @@ namespace UnitTestingExercise
         //DONE Keep track of which number is getting passed as minuend and subtrahend
 
         // Create a Multiply method that passes 2 integers
-
+        public int Multiply(int num1, int num2)
+        {
+            return num1 * num2;
+        }
         // Create a Divide method that passes 2 integers
 
 
