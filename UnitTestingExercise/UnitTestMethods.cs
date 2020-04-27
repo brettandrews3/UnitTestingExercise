@@ -31,7 +31,10 @@ namespace UnitTestingExercise
             return num1 * num2;
         }
         // Create a Divide method that passes 2 integers
-
+        public int Divide(int num1, int num2)
+        {
+            return num1 / num2;
+        }
 
 
         // Create 2 methods that will utilize the [Fact] tests you wrote
