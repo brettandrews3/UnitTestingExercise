@@ -44,22 +44,25 @@ namespace UnitTestingExercise.Tests
         public void Multiply(int num1, int num2, int expected)
         {
             //Arrange
-            var test = new UnitTestMethods();
+            var tester = new UnitTestMethods();
             //Act
-            var actual = test.Multiply(num1, num2);
+            var actual = tester.Multiply(num1, num2);
             //Assert
             Assert.Equal(expected, actual);
         }
 
         [Theory]
-        [InlineData()]
+        [InlineData(16,4,4)]
+        [InlineData(25,5,5)]
+        [InlineData(6,2,3)]
         public void Divide(int num1, int num2, int expected)
         {
             //Arrange
-
+            var test = new UnitTestMethods(); //calling on instance of this class
             //Act
-
+            var actual = test.Divide(num1, num2);
             //Assert
+            Assert.Equal(expected, actual);
 
         }
 
@@ -67,11 +70,11 @@ namespace UnitTestingExercise.Tests
         public void YourMethodName()
         {
             //Arrange
-
+            var expected = 'h';
             //Act
 
             //Assert
-
+            Assert.Equal(expected, actual);
         }
 
         [Fact]

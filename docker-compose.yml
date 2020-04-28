@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  unittestingexercise.tests:
+    image: ${DOCKER_REGISTRY-}unittestingexercise
+    build:
+      context: .
+      dockerfile: UnitTestingExercise.Tests/Dockerfile
